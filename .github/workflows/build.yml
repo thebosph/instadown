@@ -22,10 +22,14 @@ jobs:
 
       - name: Exe Derle
         run: |
-          pyinstaller --onefile --windowed  pull.py  # Ana Python dosyanın adını buraya yaz
+          pyinstaller --onefile --windowed pull.py
+
+      - name: Dist Dizinini Kontrol Et
+        run: |
+          ls -R dist
 
       - name: Çıktıyı Kaydet
         uses: actions/upload-artifact@v4
         with:
           name: windows-executable
-          path: dist/script.exe # Oluşturulan .exe dosyasının yolu
+          path: dist/pull.exe # Burayı güncelle
