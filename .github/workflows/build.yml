@@ -22,7 +22,7 @@ jobs:
 
       - name: Exe Derle
         run: |
-          pyinstaller --onefile --windowed --icon=instagram_icon.py script.py  # Ana Python dosyanın adını buraya yaz
+          pyinstaller --onefile --windowed  pull.py  # Ana Python dosyanın adını buraya yaz
 
       - name: Çıktıyı Kaydet
         uses: actions/upload-artifact@v4
